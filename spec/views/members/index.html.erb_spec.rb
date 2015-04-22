@@ -7,13 +7,15 @@ RSpec.describe "members/index", type: :view do
         :first_name => "First Name",
         :last_name => "Last Name",
         :email => "my@email.com",
-        :mobile => "Mobile"
+        :mobile => "Mobile",
+        :password => "Mysringpass"
       ),
       Member.create!(
         :first_name => "First Name",
         :last_name => "Last Name",
         :email => "my1@email.com",
-        :mobile => "Mobile"
+        :mobile => "Mobile",
+        :password => "Mysringpass"
       )
     ])
   end

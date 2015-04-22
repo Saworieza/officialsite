@@ -6,7 +6,9 @@ RSpec.describe "members/edit", type: :view do
       :first_name => "MyString",
       :last_name => "MyString",
       :email => "my@email.com",
-      :mobile => "MyString"
+      :mobile => "MyString",
+      :password => "Mysringpass"
+      
     ))
   end
 

@@ -28,7 +28,8 @@ RSpec.describe MembersController, type: :controller do
       first_name: "MyString",
       last_name: "MyString",
       email: "my@email.com",
-      mobile: "MyString"
+      mobile: "MyString",
+      password: "Mysringpass"
     } 
    }
 
@@ -37,7 +38,8 @@ RSpec.describe MembersController, type: :controller do
       first_name: "",
       last_name: "",
       email: "my@email.com",
-      mobile: ""
+      mobile: "",
+      password: "Mysringpass"
     } 
   }
 
@@ -113,7 +115,14 @@ RSpec.describe MembersController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        # skip("Add a hash of attributes valid for your model")
+            {
+          first_name: "MyString1",
+          last_name: "MyString1",
+          email: "my@email.cc.om",
+          mobile: "MyString",
+          :password => "Mysringpass"
+        } 
       }
 
       it "updates the requested member" do

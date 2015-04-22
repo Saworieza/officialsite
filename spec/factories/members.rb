@@ -4,6 +4,7 @@ FactoryGirl.define do
 	last_name "MyString"
 	email "my@email.com"
 	mobile "MyString"
+	password "MyStringpass"
   end
 
 end
