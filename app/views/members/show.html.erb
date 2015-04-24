@@ -1,46 +1,67 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="medium-4 columns">
+		<img src="http://placehold.it/250x250&text=Thumbnail"/>
+	</div>
+	<div class="medium-6 columns">
+	<h3>Contact Me:</h3>
+		<p><strong>Names: </strong><%= @member.first_name %> <%= @member.last_name %></p>
+		<p><strong>Email: </strong><%= @member.email %> </p>
+		<p><strong>Mobile: </strong><%= @member.mobile %> </p>
+	</div>
+</div>
+<div class="row">
+<div class="medium-12 columns">
+	<h3>About Me</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt mollitia omnis enim nemo magnam, tenetur quod. Debitis laborum, quis tempora numquam praesentium maxime, asperiores, repellat quas sit magnam atque expedita.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas veritatis quos sapiente saepe, quo illo! Velit atque quibusdam mollitia, in recusandae ipsum distinctio dolorum corporis quae dolorem beatae excepturi, asperiores.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="medium-12 columns">
+	<h3>LakeHub Portfolio</h3>
+	<p>	<strong>Active Member of: </strong> Linux User Group, Java User Group</p>
+	<div class="medium-12 columns portfolio panel ">
+		<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+			
+		</div>
+		<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+		</div>
+				<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+			
+		</div>
+		<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+		</div>
 
-<p>You have succesfully signed up with the followin details: </p>
-<table>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="medium-12 columns">
+	<h3>Personal Portfolio</h3>
+	<div class="medium-12 columns portfolio panel ">
+		<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+			
+		</div>
+		<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+		</div>
+				<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+			
+		</div>
+		<div class="medium-3 columns">
+			<img src="http://placehold.it/200x200&text=My Work"/>
+		</div>
 
-	<thead>
-	    <tr>
-	      <th>First name</th>
-	      <th>Last name</th>
-	      <th>Email</th>
-	      <th>Mobile</th>
-	    </tr>
-	  </thead>
-
-	<tbody>
-		<tr>
-      <td><%= @member.first_name %></td>
-      <td><%= @member.last_name %></td>
-      <td><%= @member.email %></td>
-      <td><%= @member.mobile %></td>
-    </tr>
-	</tbody>
+	</div>
+	</div>
+</div>
 
 
-	<p>
-	  <strong>First name:</strong>
-	  <%= @member.first_name %>
-	</p>
-
-	<p>
-	  <strong>Last name:</strong>
-	  <%= @member.last_name %>
-	</p>
-
-	<p>
-	  <strong>Email:</strong>
-	  <%= @member.email %>
-	</p>
-
-	<p>
-	  <strong>Mobile:</strong>
-	  <%= @member.mobile %>
-	</p>
-</table>
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
