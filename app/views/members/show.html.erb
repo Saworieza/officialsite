@@ -1,7 +1,8 @@
 <%= provide(:title, "#{@member.first_name} #{@member.last_name}") %>
 <div class="row">
 	<div class="medium-4 columns">
-		<img src="http://placehold.it/250x250&text=Thumbnail"/>
+		<%=  gravatar_for(@member)%>		
+		<!-- <img src="http://placehold.it/250x250&text=Thumbnail"/> -->
 	</div>
 	<div class="medium-6 columns">
 	<h3>Contact Me:</h3>
