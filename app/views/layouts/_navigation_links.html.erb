@@ -1,2 +1,12 @@
 <%# add navigation links to this file %>
-<li><%#= link_to 'About', page_path('about') %></li>
+<% if member_signed_in? %>
+<div class="right">
+  <li><%= link_to 'Edit account', edit_member_registration_path %></li>
+  <li><%= link_to 'Sign out', destroy_member_session_path, :method=>'delete' %></li>
+</div>
+<% else %>
+<div class="right">
+  <li><%= link_to 'Log In', new_member_session_path %></li>
+  <li><%= link_to 'Become a member', new_member_registration_path %></li>
+  </div>
+<% end %>

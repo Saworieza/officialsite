@@ -1,6 +1,7 @@
 <%= provide(:title, "Become a member") %>
+
+<div class="medium-8 column medium-centered panel" id="sign-up-form">
 <h2>Become a LakeHub Member</h2>
-<div class="medium-8 column medium-centered">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 <div class="row">
@@ -40,8 +41,8 @@
       <%= f.submit "Make me a member",class: "button radius small"%>
       <%= link_to "Not Now! Next Time", members_path, class: "button radius small right" %>
     </div>
-</div>
 <% end %>
+    <p>Already a Member? <%= render "devise/shared/links" %></p>
+</div>
 
-<%= render "devise/shared/links" %>
 </div>
