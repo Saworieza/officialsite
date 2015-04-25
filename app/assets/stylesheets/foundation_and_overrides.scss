@@ -116,6 +116,8 @@ $include-html-global-classes: $include-html-classes;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
+$lakehub-blue	:#1E69B4;
+$lakehub-green	:#63A03D;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -1382,6 +1384,8 @@ $include-html-global-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: $oil;
+$topbar-bg-color: scale-color($lakehub-blue, $lightness: 15%);
+
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
