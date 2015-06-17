@@ -8,7 +8,7 @@
           <img src="http://placehold.it/250x250&text=Thumbnail"/>
           <div class="panel">          
             <h6><strong>Name:</strong> <%= member.first_name %>  <%= member.last_name %></h6>
-            <%= link_to 'Detailed Profile', member, class: "button tiny info" %>
+            <%#= link_to 'Detailed Profile', member, class: "button tiny info" %>
           </div>          
       </div>
 
@@ -21,4 +21,4 @@
 
 <br>
 
-<%= link_to 'New Member', new_member_path%>
+<%= link_to 'New Member', new_member_registration_path%>
