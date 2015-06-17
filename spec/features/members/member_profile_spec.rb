@@ -1,37 +1,37 @@
 include Warden::Test::Helpers
 Warden.test_mode!
 
-# Feature: Doctor profile page
-#   As a doctor
-#   I want to visit my doctor profile page
+# Feature: Member profile page
+#   As a member
+#   I want to visit my member profile page
 #   So I can see my personal account data
-feature 'Doctor profile page', :devise do
+feature 'Member profile page', :devise do
 	after(:each) do
 		Warden.test_reset!
 	end
 
-	# Scenario: Doctor sees own profile
+	# Scenario: Member sees own profile
 	#   Given I am signed in
-	#   When I visit the doctor profile page
+	#   When I visit the member profile page
 	#   Then I see my own email address
-	scenario 'doctor sees own profile' do
-		doctor = FactoryGirl.create(:doctor)
-		login_as(doctor, :scope => :doctor)
-		visit doctor_path(doctor)
-		expect(page).to have_content doctor.email
+	scenario 'member sees own profile' do
+		member = FactoryGirl.create(:member)
+		login_as(member, :scope => :member)
+		visit member_path(member)
+		expect(page).to have_content member.email
 	end
 
-	# Scenario: Doctor cannot see another doctor's profile
+	# Scenario: Member cannot see another member's profile
 	#   Given I am signed in
-	#   When I visit another doctor's profile
+	#   When I visit another member's profile
 	#   Then I see an 'access denied' message
-	scenario "doctor cannot see another doctor's profile" do
+	scenario "member cannot see another member's profile" do
 		skip "to be decided later"
-		me = FactoryGirl.create(:doctor)
-		other = FactoryGirl.create(:doctor, email: 'other@example.com')
-		login_as(me, :scope => :doctor)
+		me = FactoryGirl.create(:member)
+		other = FactoryGirl.create(:member, email: 'other@example.com')
+		login_as(me, :scope => :member)
 		Capybara.current_session.driver.header 'Referer', root_path
-		visit doctor_path(other)
+		visit member_path(other)
 		expect(page).to have_content 'Access denied.'
 	end
 end
