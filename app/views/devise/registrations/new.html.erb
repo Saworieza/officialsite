@@ -2,7 +2,7 @@
 
 <div class="medium-8 column medium-centered panel" id="sign-up-form">
 <h2>Become a LakeHub Member</h2>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 <div class="row">
   <div class="field medium-6 column">
@@ -22,7 +22,7 @@
 
   <div class="field medium-6 column">
     <%= f.label :mobile %>
-    <%= f.text_field :mobile, placeholder: "Your mobile phone number" %>
+    <%= f.text_field :mobile, required: true, placeholder: "Your mobile phone number" %>
   </div>
 </div>
 

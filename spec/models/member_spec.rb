@@ -9,17 +9,14 @@ RSpec.describe Member, type: :model do
 	 context "required field" do
 	 	let(:member){FactoryGirl.build(:member)}
 	 	it "first_name is not blank" do
-			skip "handled by devise"
 	 		member.first_name = ""
 	 		expect(member).not_to be_valid
 	 	end
 	 	it "last_name is not blank" do
-			skip "handled by devise"
 	 		member.last_name = ""
 	 		expect(member).not_to be_valid
 	 	end
 	 	it "mobile is not blank" do
-			skip "handled by devise"
 	 		member.mobile = ""
 	 		expect(member).not_to be_valid
 	 	end
