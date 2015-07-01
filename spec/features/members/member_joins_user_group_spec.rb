@@ -41,7 +41,6 @@ feature 'Member join user group', :devise do
 		member=FactoryGirl.create(:member)
 		group= FactoryGirl.create(:user_group)
 		group2= FactoryGirl.create(:user_group, name: "Python User Group")
-		member.user_group_ids=[group.id, group2.id]
 		login_as(member, :scope => :member)
 		visit edit_member_path(member)
 		check 'Linux User Group'
