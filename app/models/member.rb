@@ -7,4 +7,6 @@ class Member < ActiveRecord::Base
 	# EMAIL_REGEX =  /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	# validates :email, length: {maximum: 255}, uniqueness: {case_sensitive: false},
 	# 					format: {with: EMAIL_REGEX}
+	 #
+	 has_and_belongs_to_many :user_groups
 end
