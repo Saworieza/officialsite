@@ -21,7 +21,11 @@
 <div class="row">
 	<div class="medium-12 columns">
 	<h3>LakeHub Portfolio</h3>
-	<p>	<strong>Active Member of: </strong> Linux User Group, Java User Group</p>
+	<p>	<strong>Active Member of: </strong> 
+ <%@member.user_groups.each do |group|  %>
+	 <%= group.name %>
+	 <% end %>
+	</p>
 	<div class="medium-12 columns portfolio panel ">
 		<div class="medium-3 columns">
 			<img src="http://placehold.it/200x200&text=My Work"/>

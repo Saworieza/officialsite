@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
-
+	before_filter :authenticate_member!
   # GET /members
   # GET /members.json
   def index
@@ -41,7 +41,7 @@ class MembersController < ApplicationController
   def update
     respond_to do |format|
       if @member.update(member_params)
-        format.html { redirect_to @member, notice: 'Member was successfully updated.' }
+        format.html { redirect_to @member, notice: 'Your details have been updated!' }
         format.json { render :show, status: :ok, location: @member }
       else
         format.html { render :edit }

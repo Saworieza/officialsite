@@ -1,6 +1,6 @@
 <h1>Editing Member</h1>
 
-<%= simple_form_for(@member) do |f| %>
+<%= simple_form_for @member, url: {action: 'update'} do |f| %>
 	<div class="row">
 	<%# if @member.errors.any? %>
 	<!-- <div class=" medium&#45;12 columns medium&#45;centered"> -->

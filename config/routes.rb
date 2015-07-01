@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   devise_for :members
-  resources :members, :only => ['show', 'index','edit']
+  resources :members, :only => ['show', 'index','edit', 'update']
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
