@@ -1,20 +1,45 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#intro {
+	background: url('introbg.jpg') no-repeat top center;
+	background-size: cover;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	height: 600px;
+}
+
 // .top-bar {
 // 	// background: #fff;
+
 // 	border: 1px solid black;
+
 // 	height: 4rem;
+
+//
 // }
+
 // .top-bar-section ul li>a {
 // 	text-transform: uppercase;
+
 // 	color: #000;
+
+//
 // }
+
 // .top-bar-section ul {
 // 	background: #fff;
+
+//
 // }
+
 // .top-bar-section li:not(.has-form) a:not(.button){
 // 	line-height: 100%;
+
 // 	background: #fff none repeat scroll 0% 0%;
+
 // 	border-bottom: 1px solid black;
+
+//
 // }
