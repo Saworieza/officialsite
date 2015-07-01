@@ -5,41 +5,22 @@
 	background: url('introbg.jpg') no-repeat top center;
 	background-size: cover;
 	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	height: 600px;
+	.tagline {
+		text-transform: uppercase;
+		color: white;
+		position: absolute; top: 400px;
+		padding-left: 100px;
+		p {
+			font-size: 26px;
+			line-height: 0.6em;
+		}
+		.punchline p{
+			padding-top: 30px;
+			font-size: 36px;
+		
+		}
+	}
 }
-
-// .top-bar {
-// 	// background: #fff;
-
-// 	border: 1px solid black;
-
-// 	height: 4rem;
-
-//
-// }
-
-// .top-bar-section ul li>a {
-// 	text-transform: uppercase;
-
-// 	color: #000;
-
-//
-// }
-
-// .top-bar-section ul {
-// 	background: #fff;
-
-//
-// }
-
-// .top-bar-section li:not(.has-form) a:not(.button){
-// 	line-height: 100%;
-
-// 	background: #fff none repeat scroll 0% 0%;
-
-// 	border-bottom: 1px solid black;
-
-//
-// }
