@@ -1,12 +1,15 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#intro {
-	background: url('introbg.jpg') no-repeat top center;
+@mixin cover-image($image){
+	background: url($image) no-repeat top center;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+}
+#intro {
+	@include cover-image('introbg.jpg');
 	height: 600px;
 	.tagline {
 		text-transform: uppercase;
@@ -17,10 +20,56 @@
 			font-size: 26px;
 			line-height: 0.6em;
 		}
-		.punchline p{
+		.punchline p {
 			padding-top: 30px;
 			font-size: 36px;
-		
 		}
 	}
+}
+#events {
+	height: 600px;
+	border: 5px white solid;
+	.words {
+		height: 600px !important;
+		background-color: #1E59A9;
+		border-right: 5px white solid;
+	}
+	.pic {
+		height: 600px !important;
+		@include cover-image('events.jpg');
+	}
+}
+#programs {
+	height: 600px;
+	border: 10px;
+	.pic {
+		height: 600px !important;
+		@include cover-image('programs.jpg');
+		border: 5px solid white;
+	}
+	.words {
+		padding: 0;
+		border-top: 5px solid white;
+		border-bottom: 5px solid white;
+		border-right: 5px solid white;
+		.video {
+			height: 200px;
+			@include cover-image('video.jpg');
+			padding: 0;
+
+			// border: 5px solid white;
+		}
+		.description {
+			background-color: #3AB54A;
+			height: 390px;
+		}
+	}
+}
+.contact {
+	height: 300px;
+	background-color: #898989;
+}
+footer{
+	height: 50px;
+	background-color: #5D5D5D;
 }
