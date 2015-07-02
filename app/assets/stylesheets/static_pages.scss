@@ -58,6 +58,14 @@
 	.pic {
 		height: 600px !important;
 		@include cover-image('events.jpg');
+		.event-pic-words {
+			// top | horizontal | bottom
+			padding: 45% 10% 0;
+			p {
+				line-height: 1.1;
+				font-size: 2em;
+			}
+		}
 	}
 }
 #programs {
