@@ -9,10 +9,31 @@
 </section>
 <section class="events" id="events">
 	<div class="medium-4 columns words">
+		<div class="event-title">
+			<i class="fi-calendar"></i> <span class="topic">Upcoming Events</span>
+		</div>
+		<div class="event-list">
+			<div class="event">
+				<p class="title">Making an Android app from scratch in android studio</p>
+				<p class="scheduled-for">19th June 1200-1330hrs</p>
+			</div>
+			<div class="event">
+				<p class="title">Yet another Android app from scratch in android studio</p>
+				<p class="scheduled-for">19th June 1200-1330hrs</p>
+			</div>
+			<div class="event">
+				<p class="title">Web4schools Jacaranda Launch</p>
+				<p class="scheduled-for">19th June 1200-1330hrs</p>
+			</div>
+			<%= link_to "View Calendar", "#", class: "button small" %>
+		</div>
+
 
 	</div>
 	<div class="medium-8 columns pic" >
-		<%# =image_tag("events.jpg") %>
+
+		<p>learn@LakeHub</p>
+		<p><%= link_to "Join us" , new_member_registration_path %>for events and workshops</p>
 	</div>
 </section>
 <section class="programs" id="programs">
@@ -34,5 +55,5 @@
 
 </section>
 <footer>
-	
+
 </footer>
