@@ -8,6 +8,9 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 }
+@mixin pad-words {
+	padding: 0 10%;
+}
 #intro {
 	@include cover-image('introbg.jpg');
 	height: 600px;
@@ -71,11 +74,18 @@
 #programs {
 	height: 600px;
 	border: 10px;
+	color: white;
 	.pic {
 		height: 600px !important;
 		@include cover-image('programs.jpg');
 		border: 5px solid white;
-	}
+		.contain {
+			padding: 45% 10% 0;
+			p {
+				font-size: 2em;
+				line-height: 1.1;
+			}
+	}	}
 	.words {
 		padding: 0;
 		border-top: 5px solid white;
@@ -85,13 +95,46 @@
 			height: 200px;
 			@include cover-image('video.jpg');
 			padding: 0;
+			.video-words {
+				@include pad-words;
+				padding-top: 15%;
+				.video-title {
+					font-size: 1.6em;
+					line-height: 1.1;
+				}
+				.video-content {
+					font-size: 2em;
+					line-height: 1.1;
+				}
+			}
 
 			// border: 5px solid white;
 		}
 		.description {
 			background-color: #3AB54A;
 			height: 390px;
-		}
+			.program-title {
+				@include pad-words;
+				text-align: center;
+				.topic {
+					font-size: 1.5em;
+					padding-left: 20px;
+				}
+				.fi-star {
+					font-size: 4em;
+				}
+			}
+			.program-list {
+				@include pad-words;
+				p {
+					line-height: 1.1;
+					text-align: justify;
+				}
+				h4 {
+					color: white;
+					line-height: 1.1;
+				}
+		}		}
 	}
 }
 .contact {
