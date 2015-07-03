@@ -158,6 +158,9 @@ footer {
 	height: 50px;
 	background-color: #5D5D5D;
 	font-size: 0.8em;
+	.privacy {
+		line-height: 50px;
+	}
 	[class*="fi-"]{
 		font-size: 2.5em;
 		padding-right: 1em;
