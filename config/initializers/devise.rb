@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '8a22954ae8deee3647d0d71b1cc9871baef5a5494cc268a28a678144066cd7a660c9e14198f0ec092e945e6b575170fa0fb6a5fa08435cef7ee85dc97a0527bb'
+  # config.secret_key = 'f37202c6e98ef83cfe69ab8f0b602e93222ca71c91fbc76316b919d24d5503fc11d59285b9c191f2fe2be84fe8ca3ca8a8e47c5419a8bf5c3127205b876fc453'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'b09b21210e1227eff36f5b37aa511b460989581cb12eb3842054f523e32fc6f17ca1a4bff82b3e6c4a598d65dd4b49d04488d139c8b899ded582f7bea47231d2'
+  # config.pepper = '8285f2c3fb5f2bdf8be185d686c26de120c4c8d0f561ff8f54122b6d66da806d0d0a5a9ac6658dbb075c1e4ef19023569d512b6314c7552a3efc020db5bd3271'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -105,7 +105,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming their account.
-  config.allow_unconfirmed_access_for = 2.days
+   config.allow_unconfirmed_access_for = 2.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
