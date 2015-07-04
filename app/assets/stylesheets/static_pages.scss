@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @mixin cover-image($image){
-	background: url($image) no-repeat top center;
+	background: image-url($image) no-repeat top center;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
