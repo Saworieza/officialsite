@@ -16,7 +16,7 @@ gem 'foundation-icons-sass-rails'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 2.1.3'
   gem 'spring'
   gem 'factory_girl_rails'
   gem 'faker'
