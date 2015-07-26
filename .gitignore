@@ -12,6 +12,7 @@
 !/log/.keep
 /tmp
 
+/config/application.yml
 *.rbc
 capybara-*.html
 .rspec
