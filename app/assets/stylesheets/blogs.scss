@@ -1,3 +1,37 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, p {
+	font-size: 15px !important;
+	line-height: 1.4em !important;
+}
+.columns {
+	hr {
+		border-width: 5px 0px 0px;
+	}
+}
+.edit-blog, .new-blog {
+	padding-bottom: 40px;
+	h1 {
+		font-size: 1.9em;
+	}
+}
+.post-title {
+	font-size: 1.8em;
+	margin-bottom: 1em;
+	a {
+		color: #222;
+		&:hover {
+			text-decoration: underline;
+			color: black;
+		}
+	}
+}
+.post-meta {
+	i {
+		padding-right: 5px;
+	}
+	.post-author {
+	}
+}

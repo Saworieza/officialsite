@@ -1,5 +1,8 @@
-<h1>New Blog</h1>
+<% provide( :title, "New Blog Post" ) %>
+<!-- <h1>New Blog</h1> -->
 
-<%= render 'form' %>
+<div class="medium-8 columns medium-centered new-blog">
+	<%= render 'form' %>
 
-<%= link_to 'Back', blogs_path %>
+	<%= link_to 'Back', blogs_path %>
+</div>
