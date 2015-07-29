@@ -1,27 +1,29 @@
 <!-- <h1>Listing Blogs</h1> -->
-<% @blogs.each do |blog| %>
-	<div class="medium-8 columns medium-offset-1 end">
-	<div class="post-title"> <%= link_to blog.title, blog_path(blog) %> </div>
-	<div class="post-meta medium-2 columns">
-		<div class="pic th">
-			<img src="http://placehold.it/100x100">
+<div class="index-blog">
+	<% @blogs.each do |blog| %>
+		<div class="medium-8 columns medium-offset-1 end">
+		<div class="post-title"> <%= link_to blog.title, blog_path(blog) %> </div>
+		<div class="post-meta medium-2 columns">
+			<div class="pic th">
+				<img src="http://placehold.it/100x100">
+			</div>
+			<div class="post-author">
+				<i class="fi-torso"></i>	post author
+			</div>
+			<div class="post-date">
+				<i class="fi-clock"></i>	<%= blog.created_at.to_formatted_s(:short) %>
 		</div>
-		<div class="post-author">
-			<i class="fi-torso"></i>  post author
 		</div>
-		<div class="post-date">
-			<i class="fi-clock"></i>  <%= blog.created_at.to_formatted_s(:short) %>
+		<div class="medium-10 columns content right">
+			<%= raw blog.content %>
+			<%= link_to "Read More >>", blog_path(blog), class: "button tiny" %>
+		</div>
+		<hr />
 	</div>
-	</div>
-	<div class="medium-10 columns content right">
-		<%= raw blog.content %>
-		<%= link_to "Read More >>", blog_path(blog), class: "button tiny" %>
-	</div>
-	<hr />
-</div>
-<%#= link_to 'Show', blog %>
-<%#= link_to 'Edit', edit_blog_path(blog) %>
-<%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>
+	<%#= link_to 'Show', blog %>
+	<%#= link_to 'Edit', edit_blog_path(blog) %>
+	<%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 
-<%#= link_to 'New Blog', new_blog_path %>
+	<%#= link_to 'New Blog', new_blog_path %>
+</div>

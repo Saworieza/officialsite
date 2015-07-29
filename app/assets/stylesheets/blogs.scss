@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body, p {
-	font-size: 15px !important;
-	line-height: 1.4em !important;
+.index-blog, .show-blog {
+	body, p {
+		font-size: 15px ;
+		line-height: 1.4em; 
+	}
 }
 .columns {
 	hr {

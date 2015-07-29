@@ -1,14 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="show-blog medium-8 columns medium-offset-1">
+	<div class="post-title">
+		<%= @blog.title %>
+	</div>
+	<div class="medium-2 columns post-meta">
+		<div class="pic th">
+			<img src="http://placehold.it/100x100">
+		</div>
+		<div class="post-author">
+			<i class="fi-torso"></i>	post author
+		</div>
+		<div class="post-date">
+			<i class="fi-clock"></i>	<%= @blog.created_at.to_formatted_s(:short) %>
+	</div>
+	</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
+	<div class="medium-10 columns content right">
+		<%#= link_to '<< Back', blogs_path, class: "button tiny" %>
+		<%= raw @blog.content %>
+		<%= link_to '<< Back', blogs_path, class: "button tiny" %>
+	</div>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+
+	<%# = link_to 'Edit', edit_blog_path(@blog) %>
+</div>
