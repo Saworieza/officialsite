@@ -13,6 +13,8 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'foundation-icons-sass-rails'
+gem 'ckeditor'
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug'
