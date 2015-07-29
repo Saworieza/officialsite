@@ -3,38 +3,32 @@
 <div class="medium-8 column medium-centered panel" id="sign-up-form">
 <h2>Become a LakeHub Member</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%#= devise_error_messages! %>
 <div class="row">
   <div class="field medium-6 column">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, placeholder: "First Name"%>
+    <%= f.input :first_name, placeholder: "First Name"%>
   </div>
     <div class="field medium-6 column">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, placeholder: "Last Name"%>
+    <%= f.input :last_name, placeholder: "Last Name"%>
   </div>
 </div>
 <div class="row">
   <div class="field medium-6 column">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, placeholder: "Valid Email Address" %>
+    <%= f.input :email, autofocus: true, placeholder: "Valid Email Address" %>
   </div>
 
   <div class="field medium-6 column">
-    <%= f.label :mobile %>
-    <%= f.text_field :mobile, required: true, placeholder: "Your mobile phone number" %>
+    <%= f.input :mobile, required: true, placeholder: "Your mobile phone number" %>
   </div>
 </div>
 
 <div class="row">
   <div class="field medium-6 column">
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "off", placeholder: "#{@minimum_password_length } characters minimum"%>
+    <%= f.input :password, autocomplete: "off", placeholder: "#{@minimum_password_length } characters minimum"%>
   </div>
 
   <div class="field medium-6 column">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm your password" %>
+    <%= f.input :password_confirmation, autocomplete: "off", placeholder: "Confirm your password" %>
   </div>
 <div class="row">
     <div class="actions">
