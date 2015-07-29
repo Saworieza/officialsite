@@ -1,10 +1,15 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
+	def home
+		@client= Twitter::REST::Client.new do |config|
+			config.consumer_key        = ENV["TWEETER_KEY" ]
+			config.consumer_secret     = ENV["TWEETER_SECRET" ]
+		end
 
-  def about
-  end
+	end
 
-  def contact
-  end
+	def about
+	end
+
+	def contact
+	end
 end

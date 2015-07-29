@@ -13,6 +13,8 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'foundation-icons-sass-rails'
+gem 'twitter'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
