@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :blogs
+	get 'tags/:tag', to: 'blogs#index', as: :tag
 
   get 'static_pages/home'
 
