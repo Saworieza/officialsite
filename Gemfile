@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'foundation-icons-sass-rails'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development, :test do
   gem 'byebug'
