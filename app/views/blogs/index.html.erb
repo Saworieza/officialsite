@@ -1,8 +1,8 @@
 <!-- <h1>Listing Blogs</h1> -->
 <div class="index-blog">
-	<% @blogs.each do |blog| %>
-		<div class="medium-8 columns medium-offset-1 end">
-		<div class="post-title"> <%= link_to blog.title, blog_path(blog) %> </div>
+	<div class="medium-8 columns medium-offset-1 ">
+		<% @blogs.each do |blog| %>
+			<div class="post-title"> <%= link_to blog.title, blog_path(blog) %> </div>
 		<div class="post-meta medium-2 columns">
 			<div class="pic th">
 				<img src="http://placehold.it/100x100">
@@ -20,11 +20,19 @@
 			<%= link_to "Read More >>", blog_path(blog), class: "button tiny" %>
 		</div>
 		<hr />
-	</div>
-	<%#= link_to 'Show', blog %>
-	<%#= link_to 'Edit', edit_blog_path(blog) %>
-	<%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%# = link_to 'Show', blog %>
+	<%# = link_to 'Edit', edit_blog_path(blog) %>
+	<%# = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+	</div>
 
-	<%#= link_to 'New Blog', new_blog_path %>
+	<%# = link_to 'New Blog', new_blog_path %>
+	<div class="medium-2 columns end">
+		<div id="tag_cloud">
+		Tags:
+			<% tag_cloud Blog.tag_counts, %w[s m l] do |tag, css_class| %>
+				<%= link_to tag.name, tag_path(tag.name), class: [css_class, "radius secondary label"] %>
+		<% end %>
+		</div>
+	</div>
 </div>
