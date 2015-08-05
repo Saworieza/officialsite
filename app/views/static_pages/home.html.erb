@@ -58,11 +58,12 @@
 
 			<div class="program-title"><i class="fi-social-twitter"></i> <span class="topic">Latest Tweets</span></div>
 			<div class="program-list">
-				<% @client.user_timeline("LakeHub", count: 4).each do |tweet| %>
-					<%= tweet.text %>
+				<!-- bit of a menace. temporarily commented out-->
+				<%# @client.user_timeline("LakeHub", count: 4).each do |tweet| %>
+					<%#= tweet.text %>
 				<br />
 				<br />
-					<% end %>
+					<%# end %>
 				<!-- <h4>Mentoring@LakeHub</h4> -->
 				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quise cillum dolore e </p> -->
 				<!-- <h4>Yet Another One</h4> -->
